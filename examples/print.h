@@ -17,15 +17,6 @@ namespace
 	};
 
 	template<>
-	struct print_type<vmpl::not_found>
-	{
-		static void print(std::ostream& stream)
-		{
-			stream << "not_found";
-		}
-	};
-
-	template<>
 	struct print_type<unsigned int>
 	{
 		static void print(std::ostream& stream)

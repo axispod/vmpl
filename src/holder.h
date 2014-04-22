@@ -2,6 +2,9 @@
 
 namespace vmpl
 {
+	/**
+	 * Container for list of variadic types.
+	 */
 	template<typename ...Args>
 	struct holder;
 
@@ -71,6 +74,19 @@ namespace vmpl
 		};
 	}
 
+	/**
+	 * Create holder type.
+	 *
+	 * The function collapses all holders into one.
+	 *
+	 * @b Examples
+     * @code{.cpp}
+     * typedef make_holder<int, char, float>::type ht; // holder<int, char, float>
+	 * typedef make_holder<int, holder<>, holder<char, float>>::type ht2; // holder<int, char, float>
+	 * typedef make_holder<int, ht2>::type ht3; // holder<int, int, char, float>
+	 * typedef make_holder<ht3, double>::type ht4; // holder<int, int, char, float, double>
+     * @endcode
+	 */
 	template<typename ...Args>
 	struct make_holder
 	{

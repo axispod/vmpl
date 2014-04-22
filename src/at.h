@@ -5,17 +5,15 @@
 
 namespace vmpl
 {
-	struct not_found{};
-
 	namespace
 	{
-		template<std::size_t Pos, typename ... Args>
+		template<unsigned Pos, typename ... Args>
 		struct at_helper
 		{
 			typedef typename at_helper<Pos - 1, Args...>::type type;
 		};
 
-		template<std::size_t Pos, typename Head, typename ... Args>
+		template<unsigned Pos, typename Head, typename ... Args>
 		struct at_helper<Pos, Head, Args...>
 		{
 			typedef typename at_helper<Pos - 1, Args...>::type type;
@@ -28,15 +26,27 @@ namespace vmpl
 		};
 
 		template<>
-		struct at_helper<0>
-		{
-			typedef not_found type;
-		};
+		struct at_helper<0>;
 	}
 
-	template<std::size_t Pos, typename ... Args>
-	struct at : public at_helper<Pos, Args...>{};
+	/**
+	 * Get type from variadic list by Position
+	 * @b Examples
+	 * @code{.cpp}
+	 * typedef at<1, int, char, float>::type type; // char
+	 * @endcode
+	 */
+	template<unsigned Position, typename ... Args>
+	struct at : public at_helper<Position, Args...>{};
 
-	template<std::size_t Pos, typename ... Args>
-	struct at<Pos, holder<Args...>> : public at_helper<Pos, Args...>{};
+	/**
+	* Get type from variadic holder by Position
+	* @b Examples
+	* @code{.cpp}
+	* typedef holder<int, char, float> ht; // holder<int, char, float>
+	* typedef at<1, ht>::type type; // char
+	* @endcode
+	*/
+	template<unsigned Position, typename ... Args>
+	struct at<Position, holder<Args...>> : public at_helper<Position, Args...>{};
 }
