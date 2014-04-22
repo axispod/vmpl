@@ -35,9 +35,6 @@
     <ClInclude Include="src\integer_sequence.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="src\push_back.h">
-      <Filter>src</Filter>
-    </ClInclude>
     <ClInclude Include="src\replace.h">
       <Filter>src</Filter>
     </ClInclude>
@@ -50,10 +47,16 @@
     <ClInclude Include="examples\print.h">
       <Filter>examples</Filter>
     </ClInclude>
-    <ClInclude Include="src\push_front.h">
+    <ClInclude Include="src\splice.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="src\splice.h">
+    <ClInclude Include="src\erase.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\insert.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\split.h">
       <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>

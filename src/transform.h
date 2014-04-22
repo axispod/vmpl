@@ -15,7 +15,6 @@ namespace vmpl
 		template<typename Applier, typename ... Args>
 		struct transform_helper
 		{
-			//typedef holder<Args...> type;
 			typedef holder<typename apply_helper<Applier, Args>::type...> type;
 		};
 	}

@@ -34,6 +34,15 @@ namespace
 		}
 	};
 
+	template<>
+	struct print_type<unsigned short>
+	{
+		static void print(std::ostream& stream)
+		{
+			stream << "ushort";
+		}
+	};
+
 	template<typename T, T N>
 	struct print_type<std::integral_constant<T, N>>
 	{
@@ -73,7 +82,7 @@ namespace
 	{
 		static void print(std::ostream& stream)
 		{
-			stream << std::endl;
+			stream << "}" << std::endl;
 		}
 	};
 
@@ -90,5 +99,6 @@ namespace
 template<typename ...Args>
 void print(std::ostream& stream)
 {
+	std::cout << "{";
 	print_helper<Args...>::print(stream);
 }

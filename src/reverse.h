@@ -2,7 +2,6 @@
 
 #include "holder.h"
 #include "at.h"
-#include "push_back.h"
 
 namespace vmpl
 {
@@ -14,7 +13,7 @@ namespace vmpl
 		template<typename Head, typename ... Args>
 		struct reverse_helper<Head, Args...>
 		{
-			typedef typename push_back<Head, typename reverse_helper<Args...>::type>::type type;
+			typedef typename make_holder<typename reverse_helper<Args...>::type, Head>::type type;
 		};
 
 		template<typename Head>
