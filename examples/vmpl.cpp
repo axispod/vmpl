@@ -13,57 +13,9 @@
 #include <typeinfo>
 #include <type_traits>
 
+#include "print.h"
+
 using namespace vmpl;
-
-namespace
-{
-	template<typename ...Args>
-	struct print_helper;
-
-	template<typename Arg, typename ...Args>
-	struct print_helper<Arg, Args...>
-	{
-		static void print()
-		{
-			std::cout << typeid(Arg).name() << ", ";
-			print_helper<Args...>::print();
-		}
-	};
-
-	template<typename Arg>
-	struct print_helper<Arg>
-	{
-		static void print()
-		{
-			std::cout << typeid(Arg).name();
-			print_helper<>::print();
-		}
-	};
-
-	template<>
-	struct print_helper<>
-	{
-		static void print()
-		{
-			std::cout << std::endl;
-		}
-	};
-
-	template<typename ...Args>
-	struct print_helper<holder<Args...>>
-	{
-		static void print()
-		{
-			print_helper<Args...>::print();
-		}
-	};
-}
-
-template<typename ...Args>
-void print()
-{
-	print_helper<Args...>::print();
-}
 
 template<std::size_t N>
 using _int = std::integral_constant<std::size_t, N>;
@@ -137,24 +89,24 @@ int _tmain(int argc, _TCHAR* argv[])
 	typedef at<2, ht>::type t2;
 	typedef at<3, ht>::type t3;
 
-	std::cout << typeid(t0).name() << std::endl;
-	std::cout << typeid(t1).name() << std::endl;
-	std::cout << typeid(t2).name() << std::endl;
-	std::cout << typeid(t3).name() << std::endl;
+	print<t0>(std::cout);
+	print<t1>(std::cout);
+	print<t2>(std::cout);
+	print<t3>(std::cout);
 
 	typedef holder<_int<1>, _int<2>, _int<3>> hs;
 	typedef transform<add_const<10>, hs>::type h1;
 	typedef transform<sqr, hs>::type h2;
 
-	print<h1>();
-	print<h2>();
+	print<h1>(std::cout);
+	print<h2>(std::cout);
 
 	typedef make_holder<void(int, const char*, const char*)>::type hf;
 	typedef transform<type_replacer, hf>::type hf1;
 	typedef transform<type_decay, hf>::type hf2;
 
-	print<hf1>();
-	print<hf2>();
+	print<hf1>(std::cout);
+	print<hf2>(std::cout);
 
 	return 0;
 }

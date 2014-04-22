@@ -15,6 +15,7 @@
     <ClCompile Include="vsspecific\stdafx.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="examples\print.h" />
     <ClInclude Include="src\at.h" />
     <ClInclude Include="src\holder.h" />
     <ClInclude Include="src\integer_sequence.h" />

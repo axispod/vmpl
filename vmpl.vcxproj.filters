@@ -47,5 +47,8 @@
     <ClInclude Include="src\transform.h">
       <Filter>src</Filter>
     </ClInclude>
+    <ClInclude Include="examples\print.h">
+      <Filter>examples</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
