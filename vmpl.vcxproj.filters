@@ -50,5 +50,11 @@
     <ClInclude Include="examples\print.h">
       <Filter>examples</Filter>
     </ClInclude>
+    <ClInclude Include="src\push_front.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\splice.h">
+      <Filter>src</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

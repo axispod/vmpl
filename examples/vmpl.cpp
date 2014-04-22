@@ -8,6 +8,8 @@
 #include "../src/reverse.h"
 #include "../src/replace.h"
 #include "../src/transform.h"
+#include "../src/push_front.h"
+#include "../src/splice.h"
 
 #include <iostream>
 #include <typeinfo>
@@ -81,18 +83,16 @@ struct type_decay
 
 int _tmain(int argc, _TCHAR* argv[])
 {
-	typedef holder<int, char, double> ht_;
-	typedef reverse<ht_>::type ht_2;
-	typedef replace<int, unsigned int, ht_2>::type ht;
-	typedef at<0, ht>::type t0;
-	typedef at<1, ht>::type t1;
-	typedef at<2, ht>::type t2;
-	typedef at<3, ht>::type t3;
-
-	print<t0>(std::cout);
-	print<t1>(std::cout);
-	print<t2>(std::cout);
-	print<t3>(std::cout);
+	typedef holder<int, char, double> ht_;					// int, char, double
+	print<ht_>(std::cout);
+	typedef reverse<ht_>::type ht_2;						// double, char, int
+	print<ht_2>(std::cout);
+	typedef replace<int, unsigned int, ht_2>::type ht_3;	// double, char, unsigned int
+	print<ht_3>(std::cout);
+	typedef push_front<short, ht_3>::type ht_4;				// short, double, char, unsigned int
+	print<ht_4>(std::cout);
+	typedef splice<1, 2, ht_4>::type ht;
+	print<ht>(std::cout);
 
 	typedef holder<_int<1>, _int<2>, _int<3>> hs;
 	typedef transform<add_const<10>, hs>::type h1;

@@ -20,8 +20,10 @@
     <ClInclude Include="src\holder.h" />
     <ClInclude Include="src\integer_sequence.h" />
     <ClInclude Include="src\push_back.h" />
+    <ClInclude Include="src\push_front.h" />
     <ClInclude Include="src\replace.h" />
     <ClInclude Include="src\reverse.h" />
+    <ClInclude Include="src\splice.h" />
     <ClInclude Include="src\transform.h" />
     <ClInclude Include="vsspecific\stdafx.h" />
     <ClInclude Include="vsspecific\targetver.h" />

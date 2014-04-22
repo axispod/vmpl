@@ -14,7 +14,7 @@ namespace vmpl
 		template<typename Head, typename ... Args>
 		struct reverse_helper<Head, Args...>
 		{
-			typedef typename push_back<typename reverse_helper<Args...>::type, Head>::type type;
+			typedef typename push_back<Head, typename reverse_helper<Args...>::type>::type type;
 		};
 
 		template<typename Head>
