@@ -59,5 +59,14 @@
     <ClInclude Include="src\split.h">
       <Filter>src</Filter>
     </ClInclude>
+    <ClInclude Include="src\empty.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\push.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\size.h">
+      <Filter>src</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

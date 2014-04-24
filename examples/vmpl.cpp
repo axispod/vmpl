@@ -12,6 +12,9 @@
 #include "../src/split.h"
 #include "../src/insert.h"
 #include "../src/erase.h"
+#include "../src/push.h"
+#include "../src/size.h"
+#include "../src/empty.h"
 
 #include <iostream>
 #include <typeinfo>
@@ -86,17 +89,21 @@ struct type_decay
 int _tmain(int argc, _TCHAR* argv[])
 {
 	typedef make_holder<holder<int, const char*>, holder<>, char, holder<float, double>>::type ht_;					// int, const char*, char, float, double
-	print<ht_>(std::cout);
+	std::cout << "make_holder: "; print<ht_>(std::cout);
 	typedef reverse<ht_>::type ht_2;						// double, float, char, const char*, int
-	print<ht_2>(std::cout);
+	std::cout << "reverse: "; print<ht_2>(std::cout);
 	typedef replace<int, unsigned int, ht_2>::type ht_3;	// double, float, char, const char*, uint
-	print<ht_3>(std::cout);
-	typedef make_holder<short, ht_3>::type ht_4;			// short, double, float, char, const char*, uint
-	print<ht_4>(std::cout);
+	std::cout << "replace<int, unsigned>: "; print<ht_3>(std::cout);
+	typedef push_front<short, ht_3>::type ht_4;				// short, double, float, char, const char*, uint
+	std::cout << "push_front<short>: "; print<ht_4>(std::cout);
 	typedef insert<unsigned short, 2, ht_4>::type ht_5;		// short, double, ushort, float, char, const char*, uint
-	print<ht_5>(std::cout);
+	std::cout << "insert<ushort, 2>: "; print<ht_5>(std::cout);
 	typedef erase<3, ht_5>::type ht_6;						// short, double, ushort, char, const char*, uint
-	print<ht_6>(std::cout);
+	std::cout << "erase<3>: "; print<ht_6>(std::cout);
+	std::cout << "size: " << size<ht_6>::value << std::endl;
+	std::cout << "size: " << size<int, char, bool>::value << std::endl;
+	std::cout << "empty: " << empty<int>::value << std::endl;
+	std::cout << "empty: " << empty<>::value << std::endl;
 
 	std::cout << std::endl;
 
