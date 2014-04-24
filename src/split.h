@@ -28,7 +28,11 @@ namespace vmpl
 		struct split_helper<Position>;
 
 		template<>
-		struct split_helper<0>;
+		struct split_helper<0>
+		{
+			typedef holder<> head_type;
+			typedef holder<> tail_type;
+		};
 	}
 
 	template<unsigned int Position, typename ... Args>
