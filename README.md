@@ -1,7 +1,7 @@
 vmpl
 ====
 
-VMPL is a C++ template metaprogramming library using variadic templates. The library don't use rudimentary type-lists.
+VMPL is a C++ template metaprogramming library using variadic templates. The library doesn't use rudimentary type-lists.
 
 The library contains:
 * Containers
