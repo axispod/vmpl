@@ -68,5 +68,20 @@
     <ClInclude Include="src\size.h">
       <Filter>src</Filter>
     </ClInclude>
+    <ClInclude Include="src\back.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\front.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\pop.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\get.h">
+      <Filter>src</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="README.md" />
   </ItemGroup>
 </Project>

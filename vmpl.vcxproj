@@ -17,11 +17,15 @@
   <ItemGroup>
     <ClInclude Include="examples\print.h" />
     <ClInclude Include="src\at.h" />
+    <ClInclude Include="src\back.h" />
     <ClInclude Include="src\empty.h" />
     <ClInclude Include="src\erase.h" />
+    <ClInclude Include="src\front.h" />
+    <ClInclude Include="src\get.h" />
     <ClInclude Include="src\holder.h" />
     <ClInclude Include="src\insert.h" />
     <ClInclude Include="src\integer_sequence.h" />
+    <ClInclude Include="src\pop.h" />
     <ClInclude Include="src\push.h" />
     <ClInclude Include="src\replace.h" />
     <ClInclude Include="src\reverse.h" />
@@ -31,6 +35,9 @@
     <ClInclude Include="src\transform.h" />
     <ClInclude Include="vsspecific\stdafx.h" />
     <ClInclude Include="vsspecific\targetver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="README.md" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{6106B3F6-6378-4EB0-8B74-4778B39F78C6}</ProjectGuid>

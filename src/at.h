@@ -22,7 +22,7 @@ namespace vmpl
 		template<typename Head, typename ... Args>
 		struct at_helper<0, Head, Args...>
 		{
-			typedef Head type;
+			typedef holder<Head> type;
 		};
 
 		template<>

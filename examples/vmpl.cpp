@@ -15,6 +15,10 @@
 #include "../src/push.h"
 #include "../src/size.h"
 #include "../src/empty.h"
+#include "../src/front.h"
+#include "../src/back.h"
+#include "../src/pop.h"
+#include "../src/get.h"
 
 #include <iostream>
 #include <typeinfo>
@@ -104,6 +108,15 @@ int _tmain(int argc, _TCHAR* argv[])
 	std::cout << "size: " << size<int, char, bool>::value << std::endl;
 	std::cout << "empty: " << empty<int>::value << std::endl;
 	std::cout << "empty: " << empty<>::value << std::endl;
+	typedef pop_back<ht_6>::type ht_7;
+	std::cout << "pop_back: "; print<ht_7>(std::cout);
+	typedef pop_front<ht_7>::type ht_8;
+	std::cout << "pop_front: "; print<ht_8>(std::cout);
+	std::cout << "front: "; print<front<ht_8>::type>(std::cout);
+	std::cout << "back: "; print<back<ht_8>::type>(std::cout);
+
+	std::cout << typeid(get<at<1, holder<int, char>>::type>::type).name() << std::endl;
+	std::cout << typeid(safe_get<void, holder<>>::type).name() << std::endl;
 
 	std::cout << std::endl;
 
