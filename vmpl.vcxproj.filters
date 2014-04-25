@@ -10,6 +10,9 @@
     <Filter Include="vsspecific">
       <UniqueIdentifier>{f519554b-408e-47df-b98d-da8bbd04aea8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="tests">
+      <UniqueIdentifier>{c9c98c4e-4962-4af1-b2da-e3af1a73d717}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="examples\vmpl.cpp">
@@ -44,9 +47,6 @@
     <ClInclude Include="src\transform.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="examples\print.h">
-      <Filter>examples</Filter>
-    </ClInclude>
     <ClInclude Include="src\splice.h">
       <Filter>src</Filter>
     </ClInclude>
@@ -79,6 +79,21 @@
     </ClInclude>
     <ClInclude Include="src\get.h">
       <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="tests\holder.h">
+      <Filter>tests</Filter>
+    </ClInclude>
+    <ClInclude Include="tests\testf.h">
+      <Filter>tests</Filter>
+    </ClInclude>
+    <ClInclude Include="tests\at.h">
+      <Filter>tests</Filter>
+    </ClInclude>
+    <ClInclude Include="tests\get.h">
+      <Filter>tests</Filter>
+    </ClInclude>
+    <ClInclude Include="tests\back.h">
+      <Filter>tests</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

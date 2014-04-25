@@ -3,32 +3,16 @@
 
 #include "../vsspecific/stdafx.h"
 
-#include "../src/at.h"
-#include "../src/integer_sequence.h"
-#include "../src/reverse.h"
-#include "../src/replace.h"
-#include "../src/transform.h"
-#include "../src/splice.h"
-#include "../src/split.h"
-#include "../src/insert.h"
-#include "../src/erase.h"
-#include "../src/push.h"
-#include "../src/size.h"
-#include "../src/empty.h"
-#include "../src/front.h"
-#include "../src/back.h"
-#include "../src/pop.h"
-#include "../src/get.h"
+#include "../tests/holder.h"
+#include "../tests/at.h"
+#include "../tests/get.h"
+#include "../tests/back.h"
 
 #include <iostream>
 #include <typeinfo>
 #include <type_traits>
 
-#include "print.h"
-
-using namespace vmpl;
-
-template<std::size_t N>
+/*template<std::size_t N>
 using _int = std::integral_constant<std::size_t, N>;
 
 template<std::size_t add>
@@ -87,12 +71,12 @@ struct type_decay
 	{
 		typedef typename std::decay<T>::type type;
 	};
-};
+};*/
 
 
 int _tmain(int argc, _TCHAR* argv[])
 {
-	typedef make_holder<holder<int, const char*>, holder<>, char, holder<float, double>>::type ht_;					// int, const char*, char, float, double
+	/*typedef make_holder<holder<int, const char*>, holder<>, char, holder<float, double>>::type ht_;					// int, const char*, char, float, double
 	std::cout << "make_holder: "; print<ht_>(std::cout);
 	typedef reverse<ht_>::type ht_2;						// double, float, char, const char*, int
 	std::cout << "reverse: "; print<ht_2>(std::cout);
@@ -145,7 +129,12 @@ int _tmain(int argc, _TCHAR* argv[])
 	typedef transform<type_decay, hf>::type hf2;
 
 	print<hf1>(std::cout);
-	print<hf2>(std::cout);
+	print<hf2>(std::cout);*/
+
+	vmpl_tests::test_holder();
+	vmpl_tests::test_get();
+	vmpl_tests::test_at();
+	vmpl_tests::test_back();
 
 	return 0;
 }

@@ -15,7 +15,6 @@
     <ClCompile Include="vsspecific\stdafx.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="examples\print.h" />
     <ClInclude Include="src\at.h" />
     <ClInclude Include="src\back.h" />
     <ClInclude Include="src\empty.h" />
@@ -33,6 +32,11 @@
     <ClInclude Include="src\splice.h" />
     <ClInclude Include="src\split.h" />
     <ClInclude Include="src\transform.h" />
+    <ClInclude Include="tests\at.h" />
+    <ClInclude Include="tests\back.h" />
+    <ClInclude Include="tests\get.h" />
+    <ClInclude Include="tests\holder.h" />
+    <ClInclude Include="tests\testf.h" />
     <ClInclude Include="vsspecific\stdafx.h" />
     <ClInclude Include="vsspecific\targetver.h" />
   </ItemGroup>

@@ -26,7 +26,10 @@ namespace vmpl
 		};
 
 		template<>
-		struct at_helper<0>;
+		struct at_helper<0>
+		{
+			typedef holder<> type;
+		};
 	}
 
 	/**

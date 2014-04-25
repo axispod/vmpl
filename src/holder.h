@@ -72,6 +72,12 @@ namespace vmpl
 		{
 			typedef typename implode<typename to_holder<Args>::type...>::type type;
 		};
+
+		template<>
+		struct make_holder_helper<>
+		{
+			typedef holder<> type;
+		};
 	}
 
 	/**
