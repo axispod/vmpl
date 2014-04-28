@@ -1,7 +1,8 @@
 #pragma once
 
+#include <vmpl/get.h>
+
 #include "testf.h"
-#include "../src/get.h"
 
 namespace vmpl_tests
 {

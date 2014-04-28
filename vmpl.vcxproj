@@ -15,23 +15,23 @@
     <ClCompile Include="vsspecific\stdafx.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\at.h" />
-    <ClInclude Include="src\back.h" />
-    <ClInclude Include="src\empty.h" />
-    <ClInclude Include="src\erase.h" />
-    <ClInclude Include="src\front.h" />
-    <ClInclude Include="src\get.h" />
-    <ClInclude Include="src\holder.h" />
-    <ClInclude Include="src\insert.h" />
-    <ClInclude Include="src\integer_sequence.h" />
-    <ClInclude Include="src\pop.h" />
-    <ClInclude Include="src\push.h" />
-    <ClInclude Include="src\replace.h" />
-    <ClInclude Include="src\reverse.h" />
-    <ClInclude Include="src\size.h" />
-    <ClInclude Include="src\splice.h" />
-    <ClInclude Include="src\split.h" />
-    <ClInclude Include="src\transform.h" />
+    <ClInclude Include="include\vmpl\at.h" />
+    <ClInclude Include="include\vmpl\back.h" />
+    <ClInclude Include="include\vmpl\empty.h" />
+    <ClInclude Include="include\vmpl\erase.h" />
+    <ClInclude Include="include\vmpl\front.h" />
+    <ClInclude Include="include\vmpl\get.h" />
+    <ClInclude Include="include\vmpl\holder.h" />
+    <ClInclude Include="include\vmpl\insert.h" />
+    <ClInclude Include="include\vmpl\integer_sequence.h" />
+    <ClInclude Include="include\vmpl\pop.h" />
+    <ClInclude Include="include\vmpl\push.h" />
+    <ClInclude Include="include\vmpl\replace.h" />
+    <ClInclude Include="include\vmpl\reverse.h" />
+    <ClInclude Include="include\vmpl\size.h" />
+    <ClInclude Include="include\vmpl\splice.h" />
+    <ClInclude Include="include\vmpl\split.h" />
+    <ClInclude Include="include\vmpl\transform.h" />
     <ClInclude Include="tests\at.h" />
     <ClInclude Include="tests\back.h" />
     <ClInclude Include="tests\get.h" />
@@ -74,9 +74,11 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
+    <IncludePath>include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>

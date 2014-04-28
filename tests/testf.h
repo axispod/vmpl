@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../src/holder.h"
+#include <vmpl/holder.h>
 
 #include <type_traits>
 #include <typeinfo>

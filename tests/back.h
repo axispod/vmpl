@@ -1,9 +1,9 @@
 #pragma once
 
-#include "testf.h"
-#include "../src/back.h"
-
+#include <vmpl/back.h>
 #include <iostream>
+
+#include "testf.h"
 
 namespace vmpl_tests
 {

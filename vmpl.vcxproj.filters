@@ -1,9 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="src">
-      <UniqueIdentifier>{dd5e83f1-ed02-4c60-a0db-c1e4232ce10c}</UniqueIdentifier>
-    </Filter>
     <Filter Include="examples">
       <UniqueIdentifier>{c20eaa39-19b6-4d32-9252-d64d2475d053}</UniqueIdentifier>
     </Filter>
@@ -12,6 +9,9 @@
     </Filter>
     <Filter Include="tests">
       <UniqueIdentifier>{c9c98c4e-4962-4af1-b2da-e3af1a73d717}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vmpl">
+      <UniqueIdentifier>{dd5e83f1-ed02-4c60-a0db-c1e4232ce10c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -29,57 +29,6 @@
     <ClInclude Include="vsspecific\targetver.h">
       <Filter>vsspecific</Filter>
     </ClInclude>
-    <ClInclude Include="src\at.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="src\holder.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="src\integer_sequence.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="src\replace.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="src\reverse.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="src\transform.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="src\splice.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="src\erase.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="src\insert.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="src\split.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="src\empty.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="src\push.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="src\size.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="src\back.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="src\front.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="src\pop.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="src\get.h">
-      <Filter>src</Filter>
-    </ClInclude>
     <ClInclude Include="tests\holder.h">
       <Filter>tests</Filter>
     </ClInclude>
@@ -94,6 +43,57 @@
     </ClInclude>
     <ClInclude Include="tests\back.h">
       <Filter>tests</Filter>
+    </ClInclude>
+    <ClInclude Include="include\vmpl\at.h">
+      <Filter>vmpl</Filter>
+    </ClInclude>
+    <ClInclude Include="include\vmpl\back.h">
+      <Filter>vmpl</Filter>
+    </ClInclude>
+    <ClInclude Include="include\vmpl\empty.h">
+      <Filter>vmpl</Filter>
+    </ClInclude>
+    <ClInclude Include="include\vmpl\erase.h">
+      <Filter>vmpl</Filter>
+    </ClInclude>
+    <ClInclude Include="include\vmpl\front.h">
+      <Filter>vmpl</Filter>
+    </ClInclude>
+    <ClInclude Include="include\vmpl\get.h">
+      <Filter>vmpl</Filter>
+    </ClInclude>
+    <ClInclude Include="include\vmpl\holder.h">
+      <Filter>vmpl</Filter>
+    </ClInclude>
+    <ClInclude Include="include\vmpl\insert.h">
+      <Filter>vmpl</Filter>
+    </ClInclude>
+    <ClInclude Include="include\vmpl\integer_sequence.h">
+      <Filter>vmpl</Filter>
+    </ClInclude>
+    <ClInclude Include="include\vmpl\pop.h">
+      <Filter>vmpl</Filter>
+    </ClInclude>
+    <ClInclude Include="include\vmpl\push.h">
+      <Filter>vmpl</Filter>
+    </ClInclude>
+    <ClInclude Include="include\vmpl\replace.h">
+      <Filter>vmpl</Filter>
+    </ClInclude>
+    <ClInclude Include="include\vmpl\reverse.h">
+      <Filter>vmpl</Filter>
+    </ClInclude>
+    <ClInclude Include="include\vmpl\size.h">
+      <Filter>vmpl</Filter>
+    </ClInclude>
+    <ClInclude Include="include\vmpl\splice.h">
+      <Filter>vmpl</Filter>
+    </ClInclude>
+    <ClInclude Include="include\vmpl\split.h">
+      <Filter>vmpl</Filter>
+    </ClInclude>
+    <ClInclude Include="include\vmpl\transform.h">
+      <Filter>vmpl</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

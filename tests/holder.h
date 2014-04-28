@@ -1,10 +1,9 @@
 #pragma once
 
-#include "testf.h"
-
-#include "../src/holder.h"
-
+#include <vmpl/holder.h>
 #include <iostream>
+
+#include "testf.h"
 
 namespace vmpl_tests
 {
