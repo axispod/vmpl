@@ -95,6 +95,24 @@
     <ClInclude Include="include\vmpl\transform.h">
       <Filter>vmpl</Filter>
     </ClInclude>
+    <ClInclude Include="tests\front.h">
+      <Filter>tests</Filter>
+    </ClInclude>
+    <ClInclude Include="include\vmpl\map.h">
+      <Filter>vmpl</Filter>
+    </ClInclude>
+    <ClInclude Include="include\vmpl\pair.h">
+      <Filter>vmpl</Filter>
+    </ClInclude>
+    <ClInclude Include="include\vmpl\numrics.h">
+      <Filter>vmpl</Filter>
+    </ClInclude>
+    <ClInclude Include="include\vmpl\function_info.h">
+      <Filter>vmpl</Filter>
+    </ClInclude>
+    <ClInclude Include="tests\function_info.h">
+      <Filter>tests</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md" />

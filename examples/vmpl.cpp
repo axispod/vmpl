@@ -7,15 +7,19 @@
 #include "../tests/at.h"
 #include "../tests/get.h"
 #include "../tests/back.h"
+#include "../tests/front.h"
+#include "../tests/function_info.h"
+
+#include <vmpl/map.h>
+#include <vmpl/numrics.h>
 
 #include <iostream>
 #include <typeinfo>
 #include <type_traits>
 
-/*template<std::size_t N>
-using _int = std::integral_constant<std::size_t, N>;
+using namespace vmpl;
 
-template<std::size_t add>
+/*template<std::size_t add>
 struct add_const
 {
 	template<typename T>
@@ -73,6 +77,17 @@ struct type_decay
 	};
 };*/
 
+template<typename T>
+void print_map_result()
+{
+	std::cout << "found by index: " << T::first_type::value << " value: " << T::second_type::value << std::endl;
+}
+
+template<>
+void print_map_result<void>()
+{
+	std::cout << "not found" << std::endl;
+}
 
 int _tmain(int argc, _TCHAR* argv[])
 {
@@ -131,10 +146,34 @@ int _tmain(int argc, _TCHAR* argv[])
 	print<hf1>(std::cout);
 	print<hf2>(std::cout);*/
 
-	vmpl_tests::test_holder();
-	vmpl_tests::test_get();
-	vmpl_tests::test_at();
-	vmpl_tests::test_back();
+	//vmpl_tests::test_holder();
+	//vmpl_tests::test_get();
+	//vmpl_tests::test_at();
+	//vmpl_tests::test_back();
+	//vmpl_tests::test_front();
+	vmpl_tests::test_function_info();
+
+	/*typedef holder<
+		pair<int_<0>, int_<1>>,
+		pair<int_<1>, int_<2>>,
+		pair<int_<2>, int_<4>>,
+		pair<int_<3>, int_<8>>,
+		pair<int_<4>, int_<16>>,
+		pair<int_<5>, int_<32>>,
+		pair<int_<6>, int_<64>>,
+		pair<int_<7>, int_<128>>
+	> map_type;
+
+	typedef map_find<int_<4>, map_type>::type type;
+
+	print_map_result<type>();
+	std::cout << "index: " << map_index<int_<5>, map_type>::value << std::endl;
+
+	typedef map_insert<pair<int_<44>, int_<1616>>, int_<0>, map_type>::type map_type2;
+	typedef map_erase<int_<4>, map_type2>::type map_type3;
+	typedef map_replace<int_<5>, pair<int_<8>, int_<256>>, map_type3>::type map_type4;
+
+	tests::print_list<map_type4>(std::cout);*/
 
 	return 0;
 }

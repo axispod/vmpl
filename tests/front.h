@@ -1,15 +1,15 @@
 #pragma once
 
-#include <vmpl/back.h>
+#include <vmpl/front.h>
 #include <iostream>
 
 #include "testf.h"
 
 namespace vmpl_tests
 {
-	void test_back()
+	void test_front()
 	{
-		std::cout << "== back tests ==" << std::endl;
+		std::cout << "== front tests ==" << std::endl;
 
 		typedef vmpl::holder<>				empty_holder;
 		typedef vmpl::holder<int>			one_type_holder;
@@ -21,32 +21,32 @@ namespace vmpl_tests
 
 		tests::assert_equal<
 			vmpl::holder<>,
-			vmpl::back<empty_holder>::type
-		>(std::cout, "back<empty_holder>");
+			vmpl::front<empty_holder>::type
+		>(std::cout, "front<empty_holder>");
 
 		tests::assert_equal<
 			vmpl::holder<>,
-			vmpl::back<>::type
-		>(std::cout, "back<>");
+			vmpl::front<>::type
+		>(std::cout, "front<>");
 
 		tests::assert_equal<
 			vmpl::holder<int>,
-			vmpl::back<one_type_holder>::type
-		>(std::cout, "back<one_type_holder>");
+			vmpl::front<one_type_holder>::type
+		>(std::cout, "front<one_type_holder>");
 
 		tests::assert_equal<
 			vmpl::holder<int>,
-			vmpl::back<int>::type
-		>(std::cout, "back<int>");
+			vmpl::front<int>::type
+		>(std::cout, "front<int>");
 
 		tests::assert_equal<
-			vmpl::holder<int>,
-			vmpl::back<two_types_holder>::type
-		>(std::cout, "back<two_types_holder>");
+			vmpl::holder<char>,
+			vmpl::front<two_types_holder>::type
+		>(std::cout, "front<two_types_holder>");
 
 		tests::assert_equal<
-			vmpl::holder<int>,
-			vmpl::back<char, int>::type
-		>(std::cout, "back<char, int>");
+			vmpl::holder<char>,
+			vmpl::front<char, int>::type
+		>(std::cout, "front<char, int>");
 	}
 }

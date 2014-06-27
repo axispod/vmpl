@@ -20,10 +20,14 @@
     <ClInclude Include="include\vmpl\empty.h" />
     <ClInclude Include="include\vmpl\erase.h" />
     <ClInclude Include="include\vmpl\front.h" />
+    <ClInclude Include="include\vmpl\function_info.h" />
     <ClInclude Include="include\vmpl\get.h" />
     <ClInclude Include="include\vmpl\holder.h" />
     <ClInclude Include="include\vmpl\insert.h" />
     <ClInclude Include="include\vmpl\integer_sequence.h" />
+    <ClInclude Include="include\vmpl\map.h" />
+    <ClInclude Include="include\vmpl\numrics.h" />
+    <ClInclude Include="include\vmpl\pair.h" />
     <ClInclude Include="include\vmpl\pop.h" />
     <ClInclude Include="include\vmpl\push.h" />
     <ClInclude Include="include\vmpl\replace.h" />
@@ -34,6 +38,8 @@
     <ClInclude Include="include\vmpl\transform.h" />
     <ClInclude Include="tests\at.h" />
     <ClInclude Include="tests\back.h" />
+    <ClInclude Include="tests\front.h" />
+    <ClInclude Include="tests\function_info.h" />
     <ClInclude Include="tests\get.h" />
     <ClInclude Include="tests\holder.h" />
     <ClInclude Include="tests\testf.h" />
